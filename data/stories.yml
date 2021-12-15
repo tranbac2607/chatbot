@@ -1,0 +1,13 @@
+version: "2.0"
+
+stories:
+
+- story: ask somethings
+  steps:
+  - intent: ask_time_working
+  - action: utter_time_working
+  - intent: ask_role
+  - action: action_tell_name
+  - intent: ask_wifi
+  - action: action_tell_pass_wifi
+

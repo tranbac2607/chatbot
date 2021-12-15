@@ -1,0 +1,8 @@
+version: "2.0"
+
+rules:
+
+- rule: Tell time working
+  steps:
+  - intent: ask_time_working
+  - action: utter_time_working

@@ -1,0 +1,32 @@
+version: "2.0"
+
+intents:
+  - ask_time_working
+  - ask_role
+  - ask_wifi
+    
+entities:
+  - role
+  - wifi
+
+slots:
+  role:
+    type: text
+    auto_fill: true
+  wifi:
+    type: text
+    auto_fill: true
+
+responses:
+  utter_time_working:
+  - text: "Công ty mình làm từ thứ 2 đến thứ 6, được nghỉ 2 ngày cuối tuần.\n
+        Ca sáng từ 8h đến 11h50 và ca chiều từ 13h đến 17h ạ!"
+
+
+actions:
+- action_tell_name
+- action_tell_pass_wifi
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,26 @@
+language: vi
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+    use_masked_language_model: True
+    embedding_dimension: 30
+    connection_density: 0.7
+    model_confidence: softmax
+    constrain_similarities: True
+  - name: RegexEntityExtractor
+    use_lookup_tables: True
+
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+  - name: RulePolicy

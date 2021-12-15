@@ -1,0 +1,36 @@
+version: "2.0"
+
+nlu:
+
+- intent: ask_time_working
+  examples: |
+    - công ty làm những ngày nào vậy?
+    - cuối tuần mình có được nghỉ không?
+    - thứ 7 chủ nhật có được nghỉ không?
+    - giờ làm việc như thế nào?
+    - vào làm từ mấy giờ?
+    - mấy giờ vào làm?
+    - mấy giờ tan làm?
+    - nghỉ lúc mấy giờ
+    - lịch làm công ty thế nào?
+    - lịch làm việc của công ty?
+
+- intent: ask_role
+  examples: |
+    - [chủ tịch](role) công ty là ai?
+    - ai là [chủ tịch](role) của công ty?
+    - [giám đốc](role) công ty là ai?
+    - ai là [giám đốc](role) công ty?
+    - [techlead](role) công ty là ai?
+    - ai là [techlead](role) của công ty?
+    - lead team [AI](role) là ai?
+    - team [web](role) ai làm lead?
+
+- intent: ask_wifi
+  examples: |
+    - pass wifi [Mirai](wifi) là gì vậy?
+    - [Mirai](wifi) có pass là gì?
+    - [Grooodev5](wifi) có pass wifi là gì?
+    - wifi [Grooodev5](wifi) pass là gì?
+
+
